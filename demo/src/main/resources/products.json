@@ -1,13 +1,27 @@
 [
-    {
-      "id": 1,
-      "description": "Portatil Acer 1",
-      "price": 10.5
-    },
-    {
-      "id": 2,
-      "description": "Air Fryer Sony",
-      "price": 20.0
-    }
+  {
+    "id": 1,
+    "description": "Portatil Acer 1",
+    "price": 10.5
+  },
+  {
+    "id": 2,
+    "description": "Air Fryer Sony",
+    "price": 20.0
+  },
+  {
+    "id": 3,
+    "description": "Motorola Edge",
+    "price": 50.0
+  },
+  {
+    "id": 4,
+    "description": "Mechanical Keyboard RK65",
+    "price": 25.0
+  },
+  {
+    "id": 5,
+    "description": "XFX AMD RX 6600",
+    "price": 199.0
+  }
 ]
-  

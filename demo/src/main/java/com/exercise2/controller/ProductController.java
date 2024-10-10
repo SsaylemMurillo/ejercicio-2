@@ -2,9 +2,8 @@ package com.exercise2.controller;
 
 import org.springframework.web.bind.annotation.*;
 
-import com.exercise2.DAO.IProductDAO;
+import com.exercise2.DAO.IProduct;
 import com.exercise2.config.DatabaseConfig;
-import com.exercise2.factory.ProductDAOFactory;
 import com.exercise2.model.Product;
 
 import java.util.List;
@@ -13,10 +12,11 @@ import java.util.List;
 @RequestMapping("/products")
 public class ProductController {
 
-    private IProductDAO productDAO;
+    private IProduct productDAO;
 
     public ProductController() {
-        this.productDAO = DatabaseConfig.getConfiguredDAO();
+        DatabaseConfig.configureAdapterDB("Oracle");
+        this.productDAO = DatabaseConfig.getProductDAO();
     }
 
     @GetMapping

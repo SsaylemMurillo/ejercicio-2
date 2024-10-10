@@ -6,10 +6,10 @@ import java.util.List;
 import com.exercise2.model.Product;
 import com.exercise2.utils.JsonUtil;
 
-public class MySQLProductDAO implements IProductDAO {
+public class MySQLProductDB implements IProduct {
     private List<Product> products = new ArrayList<>();
 
-    public MySQLProductDAO() {
+    public MySQLProductDB() {
         this.products = JsonUtil.readProductsFromFile();
     }
 
@@ -17,7 +17,7 @@ public class MySQLProductDAO implements IProductDAO {
     public List<Product> getAll() {
         return products;
     }
- 
+
     @Override
     public Product getById(int id) {
         return products.stream().filter(p -> p.getId() == id).findFirst().orElse(null);
@@ -35,4 +35,3 @@ public class MySQLProductDAO implements IProductDAO {
         JsonUtil.writeProductsToFile(products);
     }
 }
-

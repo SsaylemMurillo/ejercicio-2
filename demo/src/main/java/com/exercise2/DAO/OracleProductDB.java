@@ -8,10 +8,10 @@ import java.util.stream.Collectors;
 import com.exercise2.model.Product;
 import com.exercise2.utils.JsonUtil;
 
-public class OracleProductDAO implements IProductDAO {
+public class OracleProductDB implements IProduct {
     private Map<Integer, Product> products = new HashMap<>();
 
-    public OracleProductDAO() {
+    public OracleProductDB() {
         List<Product> productsList = JsonUtil.readProductsFromFile();
         products = new HashMap<>();
         if (productsList != null) {
